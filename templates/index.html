@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>INDEX</title>
+        <style>
+            * { margin:0; padding:10px; font-family:"Helvetica"; }
+            #header { text-align:center; width:50%; margin:0 auto; margin-top:100px; }
+            #_form { max-width:30%; margin:0 auto; margin-top:25px; }
+            @media only screen and (max-width: 1200px) {
+                #header { text-align:center; width:50%; margin:0 auto; margin-top:100px; }
+                #_form { max-width:40%; margin:0 auto; margin-top:25px; }
+            }
+            @media only screen and (max-width: 991px) {
+                #header { text-align:center; width:70%; margin:0 auto; margin-top:100px; }
+                #_form { max-width:60%; margin:0 auto; margin-top:25px; }
+            }
+            @media only screen and (max-width: 768px) {
+                #header { text-align:center; width:100%; margin:0 auto; margin-top:100px; }
+                #_form { max-width:80%; margin:0 auto; margin-top:25px; }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="header">
+            ParaChecker
+            <div style="margin-top:25px; font-size:18px; font-weight:normal;">This application is to find the sentiment behind each contextual sentence in a paragraph of any book</div>
+        </h1>
+        <form method="post" action="/" id="_form">
+            <input type="text" value="Person: Anonymous" style="width:100%; padding:10px; border:1px solid #e6e6e6; border-radius:10px;" disabled><br>
+            <input type="text" name="book" placeholder="Name of the novel" style="margin-top:10px; width:100%; padding:10px; border:1px solid #e6e6e6; border-radius:10px;" required><br>
+            <textarea name="paragraph" rows="7" placeholder="Paragraph" minlength="2000" maxlength="10000" style="margin-top:10px; width:100%; padding:10px; border:1px solid #e6e6e6; border-radius:10px;" required></textarea><br>
+            <button type="submit" style="margin-top:10px; font-size:12px; padding:7px; background:orange; color:#000; border:1px solid #ffcc00; border-radius:5px; cursor:pointer;"><b>Submit</b></button>
+        </form>
+    </body>
+</html>

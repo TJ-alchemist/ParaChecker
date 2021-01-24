@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SUCCESS</title>
+        <style>
+            * { margin:0; padding:10px; font-family:"Helvetica"; }
+            #result { text-align:center; width:60%; margin:0 auto; margin-top:25px; }
+            table { font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; }
+            table td, #customers th { border: 1px solid #f2f2f2; padding: 8px; }
+            table tr:nth-child(even){ background-color: #f2f2f2; }
+            table tr:hover { background-color: #ddd; }
+            table th { padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #4CAF50;
+                       color: white; border: 1px solid #f2f2f2; }
+            @media only screen and (max-width: 1200px) {
+                #result { text-align:center; width:50%; margin:0 auto; margin-top:100px; }
+            }
+            @media only screen and (max-width: 991px) {
+                #result { text-align:center; width:70%; margin:0 auto; margin-top:100px; }
+            }
+            @media only screen and (max-width: 768px) {
+                #result { text-align:center; width:100%; margin:0 auto; margin-top:100px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="result">
+            <h1>Analysis</h1>
+            <span style="font-size:25px;">Name of the book: {{ book }}</span>
+            <br><br>
+            <a href="/"><b>RESET</b></a>
+            <br><br>
+            {{ data.to_html() | safe }}
+            <div style="margin-top:25px; font-size:18px;">***** End ******</div>
+        </div>
+    </body>
+</html>
